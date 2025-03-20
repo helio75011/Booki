@@ -414,6 +414,14 @@ a {
     margin-top: 15px;
 }
 
+/* hebergements-card responsive */
+@media (max-width: 768px) {
+    .hebergements-cards {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
 /* Cartes Hébergements */
 .hebergements .card {
     background-color: white;
@@ -700,6 +708,7 @@ a {
 @media (max-width: 768px) {
     .activites-container {
         grid-template-columns: 1fr;
+        padding: 0 20px;
     }
 
     #activites-section {
@@ -711,6 +720,11 @@ a {
     }
 }
 
+@media (max-width: 500px) {
+    .activites-container {
+        padding: 0;
+    }
+}
 
 #footer {
     background-color: #f2f2f2;
