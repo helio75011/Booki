@@ -19,6 +19,7 @@ body {
     width: 40%;
     height: auto;
     padding-top: 35px;
+    padding-left: 30px;
 }
 
 /* header mobile */
@@ -149,7 +150,7 @@ body {
 /* search mobile */
 @media (max-width: 500px) {
     #search-form {
-        justify-content: center;
+        justify-content: space-between;
     }
 }
 
@@ -361,6 +362,7 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+    padding: 15px 0;
 }
 
 .card {
@@ -641,7 +643,8 @@ a {
 .activites-title {
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    padding: 15px 0;
 }
 
 /* Grille des cartes d'activités */
