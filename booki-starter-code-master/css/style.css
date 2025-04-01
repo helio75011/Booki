@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
 body {
     margin: 0;
 }
@@ -297,6 +307,7 @@ body {
 }
 
 @media (max-width : 500px) {
+
     .filter-display-tablette {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
@@ -336,6 +347,21 @@ body {
 
     .filters-container {
         display: initial;
+    }
+}
+
+/* mode mobile */
+@media (max-width: 500px) {
+
+    .filter-button {
+        padding: 5% 10%;
+        font-size: 3.2vw;
+        white-space: nowrap;
+        gap: 4.5vw;
+    }
+
+    .filter-icon {
+        font-size: 3.2vw;
     }
 }
 
@@ -395,6 +421,7 @@ a {
     margin: 0;
     font-size: 22px;
     padding: 15px 0;
+    font-size: 1.5vw;
 }
 
 .card {
@@ -430,6 +457,7 @@ a {
     text-overflow: ellipsis;
 }
 
+/* mode tablette */
 @media (max-width: 1024px) {
     .card-title {
         font-size: 1.8vw;
@@ -437,6 +465,14 @@ a {
 
     .card-subtitle {
         font-size: 1.7vw;
+    }
+}
+
+/* mode mobile */
+@media (max-width: 500px) {
+
+    .section-title {
+        font-size: 4.5vw;
     }
 }
 
@@ -467,7 +503,7 @@ a {
 .hebergements-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
     margin-top: 15px;
 }
 
@@ -508,7 +544,7 @@ a {
 /* image mobile */
 @media (max-width: 500px) {
     .hebergements .card img {
-        height: 124px;
+        height: 30vw;
     }
 }
 
@@ -520,6 +556,7 @@ a {
     margin-top: 20px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 1.2vw;
 }
 
 /* 🖥️ SECTION LES PLUS POPULAIRES */
@@ -548,21 +585,25 @@ a {
 .populaires-cards {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 30px;
 }
 
 /* Cartes des populaires */
 .populaires-cards .card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    height: auto;
     background-color: white;
     border-radius: 25px;
     overflow: hidden;
+    /* padding: 10px; */
+    gap: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    gap: 10px;
-}
+  }
+  
 
 .populaires-cards .card:hover {
     transform: translateY(-5px);
@@ -570,14 +611,17 @@ a {
 
 /* Image */
 .populaires-cards .card img {
-    width: 123px;  /* Taille similaire aux hébergements */
-    height: 146px;
+    height: 9vw;
+    min-width: 7.3vw; /* ✅ pas plus petit */
+    max-width: 130px; /* pour garder une taille cohérente */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
-}
+} 
 
 /* Contenu des cartes */
 .populaires-cards .card-content {
+    width: 90%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -587,7 +631,7 @@ a {
 }
 
 .populaires-cards .card-txt {
-    margin-bottom: 55px;
+    /* margin-bottom: 55px; */
 }
 
 /* 🖥️ RESPONSIVE TABLETTES */
@@ -598,19 +642,57 @@ a {
 }
 
 .populaires-cards .card-title {
-    font-size: 14px;
+    font-size: 0.9vw;
+    /* font-size: 14px; */
     font-weight: bold;
+    white-space: wrap;
 }
 
 .populaires-cards .card-subtitle {
-    font-size: 13px;
+    font-size: 0.8vw;
+    /* font-size: 13px; */
     color: #555;
+}
+
+/* mode tablette */
+@media (max-width: 1024px) {
+    .populaires-cards .card-title {
+        font-size: 1.5vw;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 1.4vw;
+    }
+}
+
+/* mode mobile */
+@media (max-width: 500px) {
+
+    .card-content .card-title {
+        font-size: 3.8vw;
+    }
+
+    .card-content .card-subtitle {
+        font-size: 3vw;
+    }
+
+    .populaires-cards .card-title  {
+        font-size: 3.8vw;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 3vw;
+    }
 }
 
 .populaires-cards .card-rating {
     margin-top: auto;
-    position: fixed;
+    position: relative;
     bottom: 10px;
+}
+
+.populaires-cards .card-rating i {
+    font-size: 1.6vw;
 }
 
 .card-rating i {
@@ -627,6 +709,10 @@ a {
         width: 100%;
     }
 
+    .hebergements-more {
+        font-size: 1.6vw;
+    }
+
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -638,20 +724,29 @@ a {
         gap: 20px;
     }
 
-    .populaires-cards .card {
+    /* .populaires-cards .card {
         align-items: center;
-    }
+    } */
 
     .populaires-cards .card img {
-        width: 112px;
-        height: 146px;
-        object-fit: cover;
+        min-width: 2vw;
+        height: 15vw;
+        max-width: 130px;
+        aspect-ratio: 1 / 1;
     }
 
     .populaires-cards .card-content {
         /* width: 100%; */
         padding: 0px 10px;
         /* text-align: center; */
+    }
+
+    .card-rating i {
+        font-size: 1.6vw;
+    }    
+
+    .section-title {
+        font-size: 2.2vw;
     }
 }
 
@@ -685,6 +780,7 @@ a {
     }
     .hebergements-more {
         padding: 0 20px;
+        font-size: 3vw;
     }
 
     .populaires {
@@ -696,6 +792,13 @@ a {
     .populaires-title {
         margin-bottom: 0;
         padding: 20px;
+    }
+
+    .populaires-cards .card img {
+        min-width: 27vw;
+        height: 35vw;
+        max-width: 130px;
+        aspect-ratio: 1 / 1;
     }
 }
 
@@ -741,8 +844,9 @@ a {
 /* Image */
 .activite-image {
     width: 100%;
-    height: 380px;
+    aspect-ratio: 1.5/2;
     object-fit: cover;
+    display: block;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -758,11 +862,13 @@ a {
 .activite-name {
     padding: 15px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.2vw;
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
     /* text-align: center; */
 }
 
@@ -782,15 +888,20 @@ a {
     #activites-section {
         padding: 20px;
     }
-
-    .activite-image {
-        height: 180px;
-    }
 }
 
 @media (max-width: 500px) {
+
+    .activite-name {
+        font-size: 3.8vw;
+    }
+
     .activites-container {
         padding: 0;
+    }
+
+    .activite-image {
+        height: 40vw;
     }
 }
 
