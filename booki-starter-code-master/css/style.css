@@ -18,6 +18,8 @@
 
 body {
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .header {
@@ -28,96 +30,18 @@ body {
     /* border-bottom: 2px solid #f0f0f0; */
 }
 
-.logo img {
-    width: 40%;
-    height: auto;
-    padding-top: 35px;
-    padding-left: 30px;
-}
-
-/* header mobile */
-@media (max-width: 500px) {
-
-    .header {
-        margin-top: 15px;
-        flex-direction: column;
-    }
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0px;
-    }
-
-    .logo img {
-        padding: 0;
-    }
-
-    /* .nav-link.active {
-        border-top: none !important;
-        border-bottom: 2px solid #0065fc;
-        padding-top: 0px;
-        padding-bottom: 8px;
-    } */
-
-    .nav {
-        display: flex !important;
-        gap: 0px !important;
-        width: 100%;
-    }
-
-    .nav-link.active {
-        position: relative;
-        color: #0065fc;
-        text-decoration: none;
-        display: inline-block; /* Permet d'appliquer ::after proprement */
-        border-top: none !important;
-        padding-bottom: 15px; /* Ajoute un espace sous le texte */
-    }
-    
-    .nav-link.active:hover {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 250%; /* Ajuste la largeur de la ligne */
-        height: 2px;
-        background-color: #0065fc;
-        transform: translateX(-60%); /* Centre la ligne */
-    }
-    
-
-    .nav-link {
-        position: relative;
-        color: black;
-        text-decoration: none;
-        display: inline-block; /* Permet d'appliquer ::after proprement */
-        border-top: none !important;
-        padding-bottom: 15px; /* Ajoute un espace sous le texte */
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-link:hover {
-        box-shadow: 0px 3px #0065FC;
-    }
-
-    .nav-link::after {
-        content: "";
-        position: absolute;
-        right: 50%;
-        bottom: 0;
-        /* width: 350%;  */
-        height: 2px;
-        background-color: #f0f0f0;
-        transform: translateX(60%); /* Centre la ligne */
-    }
-}
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: #0065fc;
+}
+
+.logo img {
+    width: 40%;
+    height: auto;
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 .nav {
@@ -126,7 +50,8 @@ body {
 }
 
 .nav-link {
-    padding-top: 9.5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-decoration: none;
     color: black;
     font-weight: 500;
@@ -134,8 +59,8 @@ body {
 
 .nav-link:hover {
     color: #0065fc;
-    border-top: 2px solid #0065fc;
-    padding-top: 8px;
+    box-shadow: 0px -3px #0065FC;
+    /* padding-top: 8px; */
 }
 
 #search-section {
@@ -173,14 +98,6 @@ body {
     flex-wrap: nowrap;
     max-width: 100%;
     gap: 0; /* optionnel */
-}
-
-
-/* search mobile */
-@media (max-width: 500px) {
-    #search-form {
-        justify-content: space-between;
-    }
 }
 
 /* .search-location {
@@ -253,36 +170,6 @@ body {
     visibility: hidden;
 }
 
-@media (max-width: 500px) {
-    #search-button {
-        visibility: hidden;
-        padding: 0;
-        width: 0;
-        height: 0;
-    }
-
-    #search-button-mobile {
-        visibility: visible;
-        background-color: #0065FC;
-        border: none;
-        border-radius: 15px;
-        padding: 15px 16px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0px 2px 5px gray;
-    }
-
-    #search-button-mobile:hover {
-        background-color: #004bbd;
-    }
-
-    #search-button-mobile img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 #filters-section {
     padding: 20px 30px;
 }
@@ -304,14 +191,6 @@ body {
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 15px;
-}
-
-@media (max-width : 500px) {
-
-    .filter-display-tablette {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-    }
 }
 
 .filter-button {
@@ -341,30 +220,6 @@ body {
     background-color: #deebff;
 }
 
-
-/* mode tablette */
-@media (max-width: 1024px) {
-
-    .filters-container {
-        display: initial;
-    }
-}
-
-/* mode mobile */
-@media (max-width: 500px) {
-
-    .filter-button {
-        padding: 5% 10%;
-        font-size: 3.2vw;
-        white-space: nowrap;
-        gap: 4.5vw;
-    }
-
-    .filter-icon {
-        font-size: 3.2vw;
-    }
-}
-
 /* Info Section */
 #info-section {
     display: flex;
@@ -389,27 +244,15 @@ body {
     --filter-bg-color: #DEEBFF;
 }
 
-.fa-solid {
+/* .fa-solid {
     color: var(--main-color);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-}
+} */
 
 .main-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
-}
-
-/* main container mobile */
-@media (max-width: 500px) {
-    .main-container {
-        padding: 0;
-    }
 }
 
 a {
@@ -421,7 +264,7 @@ a {
     margin: 0;
     font-size: 22px;
     padding: 15px 0;
-    font-size: 1.5vw;
+    font-size: 1.14vw;
 }
 
 .card {
@@ -441,7 +284,7 @@ a {
 } */
 
 .card-title {
-    font-size: 1.2vw;
+    font-size: 0.97vw;
     font-weight: bold;
     margin: 0;
     white-space: nowrap;
@@ -455,25 +298,6 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-/* mode tablette */
-@media (max-width: 1024px) {
-    .card-title {
-        font-size: 1.8vw;
-    }
-
-    .card-subtitle {
-        font-size: 1.7vw;
-    }
-}
-
-/* mode mobile */
-@media (max-width: 500px) {
-
-    .section-title {
-        font-size: 4.5vw;
-    }
 }
 
 .euro {
@@ -507,15 +331,6 @@ a {
     margin-top: 15px;
 }
 
-/* hebergements-card responsive */
-@media (max-width: 768px) {
-    .hebergements-cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /* padding: 0 20px; */
-    }
-}
-
 /* Cartes Hébergements */
 .hebergements .card {
     width: 100%;
@@ -541,13 +356,6 @@ a {
     border-radius: 20px 20px 0 0;
 }
 
-/* image mobile */
-@media (max-width: 500px) {
-    .hebergements .card img {
-        height: 30vw;
-    }
-}
-
 .hebergements .card-content {
     padding: 10px;
 }
@@ -565,12 +373,6 @@ a {
     background-color: var(--main-bg-color);
     padding: 20px;
     border-radius: 15px;
-}
-
-@media (max-width: 500px) {
-    .populaires {
-        border-radius: 0;
-    }
 }
 
 /* Titre */
@@ -634,13 +436,6 @@ a {
     /* margin-bottom: 55px; */
 }
 
-/* 🖥️ RESPONSIVE TABLETTES */
-@media (max-width: 1024px) {
-    .populaires-cards .card-txt {
-        /* margin-bottom: initial; */
-    }
-}
-
 .populaires-cards .card-title {
     font-size: 0.9vw;
     /* font-size: 14px; */
@@ -652,37 +447,6 @@ a {
     font-size: 0.8vw;
     /* font-size: 13px; */
     color: #555;
-}
-
-/* mode tablette */
-@media (max-width: 1024px) {
-    .populaires-cards .card-title {
-        font-size: 1.5vw;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 1.4vw;
-    }
-}
-
-/* mode mobile */
-@media (max-width: 500px) {
-
-    .card-content .card-title {
-        font-size: 3.8vw;
-    }
-
-    .card-content .card-subtitle {
-        font-size: 3vw;
-    }
-
-    .populaires-cards .card-title  {
-        font-size: 3.8vw;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 3vw;
-    }
 }
 
 .populaires-cards .card-rating {
@@ -697,109 +461,6 @@ a {
 
 .card-rating i {
     font-size: 1.6vw;
-}
-
-/* 🖥️ RESPONSIVE TABLETTES */
-@media (max-width: 1024px) {
-    .hebergements-and-populaires {
-        display: initial;
-    }
-
-    .hebergements {
-        width: 100%;
-    }
-
-    .hebergements-more {
-        font-size: 1.6vw;
-    }
-
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .populaires-cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 cartes sur tablette */
-        gap: 20px;
-    }
-
-    /* .populaires-cards .card {
-        align-items: center;
-    } */
-
-    .populaires-cards .card img {
-        min-width: 2vw;
-        height: 15vw;
-        max-width: 130px;
-        aspect-ratio: 1 / 1;
-    }
-
-    .populaires-cards .card-content {
-        /* width: 100%; */
-        padding: 0px 10px;
-        /* text-align: center; */
-    }
-
-    .card-rating i {
-        font-size: 1.6vw;
-    }    
-
-    .section-title {
-        font-size: 2.2vw;
-    }
-}
-
-/* 📱 RESPONSIVE MOBILE */
-@media (max-width: 768px) {
-    .populaires-cards {
-        grid-template-columns: 1fr; /* 1 carte par ligne sur mobile */
-        padding: 0 20px;
-    }
-}
-
-
-@media (max-width: 500px) {
-    .hebergements {
-        background-color: #FFF;
-        padding: 0;
-    }
-
-    .section-title {
-        padding: 0 20px;
-    }
-
-    .hebergements-cards {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
-
-    .hebergements-and-populaires {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .hebergements-more {
-        padding: 0 20px;
-        font-size: 3vw;
-    }
-
-    .populaires {
-        margin-top: 0px;
-        padding: 0;
-        padding-bottom: 30px;
-    }
-
-    .populaires-title {
-        margin-bottom: 0;
-        padding: 20px;
-    }
-
-    .populaires-cards .card img {
-        min-width: 27vw;
-        height: 35vw;
-        max-width: 130px;
-        aspect-ratio: 1 / 1;
-    }
 }
 
 #activites-section {
@@ -851,13 +512,6 @@ a {
     border-top-right-radius: 15px;
 }
 
-/* Responsive Design tablette */
-@media (max-width: 1024px) {
-    .activite-image {
-        height: 200px;
-    }
-}
-
 /* Texte */
 .activite-name {
     padding: 15px;
@@ -872,39 +526,6 @@ a {
     /* text-align: center; */
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .activites-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .activites-container {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
-
-    #activites-section {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .activite-name {
-        font-size: 3.8vw;
-    }
-
-    .activites-container {
-        padding: 0;
-    }
-
-    .activite-image {
-        height: 40vw;
-    }
-}
-
 #footer {
     background-color: #f2f2f2;
     padding: 20px;
@@ -916,16 +537,6 @@ a {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-@media (max-width: 500px) {
-    .footer-container {
-        display: initial;
-    }
-
-    .footer-container .footer-column {
-        margin-bottom: 50px;
-    }
 }
 
 .footer-column {
