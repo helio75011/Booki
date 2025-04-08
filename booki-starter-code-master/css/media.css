@@ -107,7 +107,7 @@
 
 }
 
-
+/*  */
 
 /* hebergements-card responsive */
 @media (max-width: 768px) {
@@ -306,7 +306,7 @@
     }
 
     .section-title {
-        font-size: 4.5vw;
+        font-size: clamp(18px, 3.6vw, 18px);
     }
 
     .hebergements .card img {
@@ -318,18 +318,22 @@
     }
 
     .card-content .card-title {
-        font-size: 3.8vw;
+        font-size: 4.5vw;
     }
 
     .card-content .card-subtitle {
-        font-size: 3vw;
+        font-size: 3.7vw;
     }
 
     .populaires-cards .card-title  {
-        font-size: 3.8vw;
+        font-size: 4.5vw;
     }
 
     .populaires-cards .card-subtitle {
+        font-size: 3.7vw;
+    }
+
+    .card-rating i {
         font-size: 3vw;
     }
 
@@ -353,7 +357,7 @@
     }
     .hebergements-more {
         padding: 0 20px;
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .populaires {
