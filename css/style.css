@@ -76,6 +76,15 @@ a {
     width: 65%;
 }
 
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hebergements-cards .card {
+    margin-top: 33px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
