@@ -20,8 +20,8 @@
         <header class="header">
             <div class="logo"><img src="images/logo/Booki.png" alt=""></div>
             <nav class="nav">
-                <a href="#" class="nav-link">Hébergements</a>
-                <a href="#" class="nav-link">Activités</a>
+                <a href="#hebergements" class="nav-link">Hébergements</a>
+                <a href="#activites-section" class="nav-link">Activités</a>
             </nav>
         </header>
         <main>
@@ -34,7 +34,7 @@
                     <form id="search-form">
                         <div class="search-location">
                             <span class="search-icon">
-                                <img src="images/logo/Localisation.png" alt="">
+                                <i class="fas fa-location-dot"></i>
                             </span>
                             <input type="text" id="search-input" placeholder="Marseille, France">
                         </div>
@@ -55,28 +55,34 @@
                             <span class="filter-text">Économique</span>
                         </button>
                         <button class="filter-button">
-                            <span class="filter-icon"><img src="images/logo/Famille.png" alt=""></span>
+                            <span class="filter-icon">
+                                <i class="fas fa-person"></i>
+                            </span>
                             <span class="filter-text">Familial</span>
                         </button>
                         <button class="filter-button">
-                            <span class="filter-icon"><img src="images/logo/Coeur.png" alt=""></span>
+                            <span class="filter-icon">
+                                <i class="fas fa-heart"></i>
+                            </span>
                             <span class="filter-text">Romantique</span>
                         </button>
                         <button class="filter-button">
-                            <span class="filter-icon"><img src="images/logo/Flame.png" alt=""></span>
+                            <span class="filter-icon">
+                                <i class="fas fa-fire"></i>
+                            </span>
                             <span class="filter-text">Nos pépites</span>
                         </button>
                     </div>
                 </div>
             
                 <div id="info-section">
-                    <span class="info-icon"><img src="images/logo/Icon.png" alt=""></span>
+                    <span class="info-icon"><i class="fa-solid fa-info fa-xs" id="information"></i></span>
                     <p class="info-text">Plus de 500 logements sont disponibles dans cette ville</p>
                 </div>
             </section>
 
             <div class="hebergements-and-populaires">
-                <section class="hebergements">
+                <section class="hebergements" id="hebergements">
                     <h2 class="section-title">Hébergements à Marseille</h2>
                     <div class="hebergements-cards">
                 

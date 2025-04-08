@@ -1,7 +1,5 @@
 /****** General ***********/
-*,
-*::before,
-*::after {
+* {
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
@@ -50,6 +48,7 @@ body {
 }
 
 .nav-link {
+    font-size: 16px;
     padding-top: 15px;
     padding-bottom: 15px;
     text-decoration: none;
@@ -143,7 +142,7 @@ body {
     border: none;
     /* background: none; */
     outline: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin: 20px;
     flex-grow: 1;
@@ -152,6 +151,7 @@ body {
 }
 
 #search-button {
+    font-size: 18px;
     background-color: #0065fc;
     color: white;
     border: none;
@@ -201,7 +201,7 @@ body {
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     padding: 10px 22px;
-    font-size: 14px;
+    font-size: 17px;
     cursor: pointer;
     font-weight: 500;
     font-weight: bold;
@@ -234,8 +234,19 @@ body {
     color: #0065fc;
 }
 
+#information {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #D9D9D9;
+    border-radius: 50%;
+}
+
 .info-text {
     margin: 0;
+    font-size: 16px;
 }
 
 :root {
@@ -262,9 +273,8 @@ a {
 
 .section-title {
     margin: 0;
-    font-size: 22px;
+    font-size: clamp(18px, 1.53vw, 24px);
     padding: 15px 0;
-    font-size: 1.14vw;
 }
 
 .card {
@@ -284,7 +294,7 @@ a {
 } */
 
 .card-title {
-    font-size: 0.97vw;
+    font-size: clamp(14px, 1.11vw, 18px);
     font-weight: bold;
     margin: 0;
     white-space: nowrap;
@@ -294,7 +304,7 @@ a {
 
 .card-subtitle {
     margin: 10px 0px;
-    font-size: 1.1vw;
+    font-size: clamp(13px, 1.1vw, 16px);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -364,7 +374,7 @@ a {
     margin-top: 20px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1.2vw;
+    font-size: clamp(16px, 1.25vw, 20px);
 }
 
 /* 🖥️ SECTION LES PLUS POPULAIRES */
@@ -413,9 +423,10 @@ a {
 
 /* Image */
 .populaires-cards .card img {
-    height: 9vw;
-    min-width: 7.3vw; /* ✅ pas plus petit */
-    max-width: 130px; /* pour garder une taille cohérente */
+    width: 33%;
+    height: 136px;
+    /* min-width: 7.3vw;
+    max-width: 130px;  */
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
@@ -437,16 +448,14 @@ a {
 }
 
 .populaires-cards .card-title {
-    font-size: 0.9vw;
-    /* font-size: 14px; */
+    font-size: clamp(14px, 1.11vw, 18px);
     font-weight: bold;
     white-space: wrap;
 }
 
 .populaires-cards .card-subtitle {
-    font-size: 0.8vw;
-    /* font-size: 13px; */
-    color: #555;
+    font-size: clamp(13px, 1.1vw, 16px);
+    color: #000;
 }
 
 .populaires-cards .card-rating {
@@ -455,12 +464,8 @@ a {
     bottom: 10px;
 }
 
-.populaires-cards .card-rating i {
-    font-size: 1.6vw;
-}
-
 .card-rating i {
-    font-size: 1.6vw;
+    font-size: clamp(13px, 1.1vw, 16px);
 }
 
 #activites-section {
@@ -470,9 +475,8 @@ a {
 }
 
 .activites-title {
-    font-size: 22px;
+    font-size: clamp(18px, 1.53vw, 24px);
     font-weight: bold;
-    /* margin-bottom: 20px; */
     padding: 15px 0;
 }
 
@@ -516,14 +520,13 @@ a {
 .activite-name {
     padding: 15px;
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: clamp(14px, 1.11vw, 18px);
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* text-align: center; */
 }
 
 #footer {
@@ -544,7 +547,7 @@ a {
 }
 
 .footer-title {
-    font-size: 16px;
+    font-size: clamp(16px, 1.25vw, 20px);
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 10px;
@@ -563,7 +566,7 @@ a {
 .footer-list a {
     text-decoration: none;
     color: black;
-    font-size: 14px;
+    font-size: clamp(14px, 1.11vw, 18px);
 }
 
 .footer-list a:hover {
